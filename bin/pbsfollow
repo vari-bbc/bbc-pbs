@@ -1,0 +1,1 @@
+watch -n 5 "echo '### STDOUT ###'; pbstdout $1 | tail; echo '### STDERR ###'; pbstderr $1 | tail"

@@ -1,0 +1,2 @@
+#lsrun -P -m $1 top
+watch -n 5 "ssh $1 top -n 1 -b | head -n 25"

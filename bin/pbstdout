@@ -1,0 +1,4 @@
+JOBID=$1
+NODE=$(qstat -f $JOBID | grep exec_host | awk '{ print $3; }' | awk -F"/" '{ print $1; }')
+
+ssh $NODE cat /cm/local/apps/torque/var/spool/spool/${JOBID}.master.cm.cluster.OU
